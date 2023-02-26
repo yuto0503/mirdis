@@ -1,0 +1,591 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* ローディングアニメーション */
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: #fff;
+  text-align: center;
+}
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#splash_logo img {
+  width: 260px;
+}
+.fadeUp {
+  animation-name: fadeInAnime;
+  animation-fill-mode:backwards;
+  animation-duration:3.5s;
+  animation-iteration-count:infinite;
+  animation-timing-function:ease;
+  animation-delay: 0.5s;
+  animation-direction:normal;
+}
+@keyframes fadeInAnime{
+from {
+  opacity: 0;
+}
+to {
+  opacity: 1;
+}
+}
+
+/* スクロールアクション */
+#header {
+  width: 100%;
+  height: 700px;
+  position: relative;
+} 
+#header:before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background:url("../images /mv.jpg") no-repeat center;
+  background-size: cover;
+}
+#container {
+  position: relative;
+  z-index:1;
+  background:#fff;
+  text-align: center;
+}
+
+/* ヘッダー */
+.logo img {
+  width: 300px;
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+h1 img {
+  width: 1000px;
+  position: absolute;
+  top: 600px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.nav_wrapper {
+  position: absolute;
+  top: 0px;
+  left: 19%;
+  background-color: rgba(0, 51, 102, 0.95);
+  width: 200px;
+  height: 380px;
+}
+.nav_wrapper img {
+  width: 130px;
+}
+.nav_wrapper li {
+  color: white;
+  font-size: 20px;
+  line-height: 3.0;
+  text-align: center;
+}
+.nav_inner {
+  padding-top: 22px;
+}
+.nav_inner a {
+  color: white;
+  font-family: 'Abel', sans-serif;
+}
+.nav_inner a:hover {
+  color: rgb(255, 255, 255, 0.5);
+  transition: 0.6s;
+}
+.nav_item a {
+  color: rgba(0, 51, 102, 0.95);
+  background-color: white;
+  padding: 0 25px;
+  font-size: 20px;
+  font-family: 'Abel', sans-serif;
+}
+.nav_item a:hover {
+  background-color: rgb(255, 255, 255, 0.5);
+  transition: 0.6s;
+}
+
+/* ABOUT US */
+.about {
+  text-align: center;
+}
+.about h2 {
+  font-size: 72px;
+  max-width: 500px;
+  margin: 0 auto;
+  border-bottom: solid 1px black;
+  padding-top: 110px;
+  padding-bottom: 40px;
+  color: #003366;
+  text-shadow: 1px 1px 4px rgb(0 0 0 / 16%);
+  font-family: 'Abel', sans-serif;
+}
+.about_bg {
+  position: relative;
+}
+.about_bg p {
+  padding-top: 78px;
+  font-size: 30px;
+  line-height: 2.6;
+}
+.about_bg_pic {
+  position: absolute;
+  top: 250px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  width: 520px;
+}
+
+/* HR事業 */
+.hr {
+  margin-top: 150px;
+}
+.hr article {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.hr_wrapper {
+  z-index: 10;
+}
+.hr_wrapper img {
+  width: 1200px;
+}
+.hr_inner  {
+  width: 250px;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 51, 102, 0.5);
+  padding: 25px 150px 25px 0;
+  position: absolute;
+  top: 0;
+  left: 130px;
+  z-index: 1000;
+}
+.hr_item {
+  width: 400px;
+  background-color: rgba(0, 51, 102, 0.5);
+  position: absolute;
+  top: -30px;
+  left: 140px;
+  z-index: 100;
+}
+.hr_item p {
+  color: white;
+  padding: 140px 55px 60px 55px;
+  text-align: left;
+  line-height: 2.5;
+  font-weight: 300;
+}
+  
+/* ITスキルアップ研修 */
+.skillup {
+  padding-top: 130px;
+}
+.skillup article {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.skillup_wrapper {
+  text-align: center;
+  z-index: 10;
+}
+.skillup_wrapper img {
+  width: 1200px;
+}
+.skillup_inner {
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: white;
+  background-color: rgba(0, 51, 102, 0.5);
+  padding: 25px 90px 25px 25px;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  z-index: 1000;
+}
+.skillup_item {
+  width: 400px;
+  background-color: rgba(0, 51, 102, 0.5);
+  position: absolute;
+  top: -30px;
+  right: 140px;
+  z-index: 100;
+}
+.skillup_item p {
+  color: white;
+  padding: 130px 38px 50px 38px;
+  line-height: 2.3;
+  letter-spacing: 2px;
+  font-weight: 300;
+}
+
+/* Webデザイン・システム開発 */
+.design {
+  padding-top: 130px;
+}
+.design article {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+.design_wrapper {
+  text-align: center;
+  z-index: 10;
+}
+.design_wrapper img {
+  width: 1200px;
+}
+.design_inner {
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 51, 102, 0.5);
+  padding: 25px;
+  position: absolute;
+  top: 0;
+  left: 128px;
+  letter-spacing: 2px;
+  z-index: 1000;
+}
+.design_item {
+  width: 410px;
+  background-color: rgba(0, 51, 102, 0.5);
+  position: absolute;
+  top: -30px;
+  left: 140px;
+  z-index: 100;
+}
+.design_item p {
+  color: white;
+  padding: 145px 32px 50px 33px;
+  text-align: left;
+  line-height: 2.0;
+  letter-spacing: 3px;
+  font-weight: 200;
+}
+
+/* RECRUIT */
+.recruit {
+  width: 100vw;
+  height: 557px;
+  margin-top: 170px;
+  background-color: #D9D9D9;
+  background-image: url("../images /recruit_bg.jpg");
+  background-size: 850px;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+.recruit article {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+.recruit_wrapper {
+  width: 500px;
+  border-bottom: solid 1px #333;
+  padding-top: 60px;
+}
+.recruit_wrapper h2 {
+  padding-bottom: 35px;
+  font-size: 70px;
+  color: #003366;
+  text-align: left;
+  text-shadow: 1px 1px 4px rgb(0 0 0 / 16%);
+  font-family: 'Abel', sans-serif;
+}
+.recruit_inner {
+  width: 745px;
+}
+.recruit_inner p {
+  font-size: 20px;
+  color: #3A3E41;
+  text-align: left;
+  line-height: 40px;
+  letter-spacing: 0.2em;
+  padding-top: 40px;
+  font-weight: 100;
+}
+.more div {
+  width: 57px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  background-color: rgba(255,255,255,0.5);
+  padding: 20px 75px 20px 75px;
+  font-family: 'Abel', sans-serif;
+}
+.more div:hover {
+  background-color: gray;
+  transition: 0.5s;
+}
+.more p {
+  font-size: 21px;
+  color: #036;
+  letter-spacing: 2px;
+}
+
+/* OUR COMPANY */
+.company {
+  display: flex;
+  position: relative;
+  width: 100vw;
+}
+.company_wrapper {
+  width: 40%;
+}
+.company_wrapper img {
+  height: 770px;
+}
+.company_inner {
+  width: 60%;
+  background-color: #728EAA;
+}
+.company_inner h2 {
+  font-size: 70px;
+  color: white;
+  text-align: left;
+  margin-top: 50px;
+  margin-left: 165px;
+  font-family: 'Abel', sans-serif;
+}
+.company_item {
+  margin-top: 50px;
+  margin-left: 100px;
+  color: white;
+}
+.company_item div {
+  display: flex;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+  width: 500px;
+  letter-spacing: 1.7px;
+}
+.company_item div:last-of-type {
+  border-bottom: none;
+}
+.company_item li {
+  padding: 13px 0 13px 40px;
+  line-height: 2.0;
+  width: 30%;
+  text-align: left;
+  font-weight: 400;
+}
+.company_item p {
+  padding-top: 13px;
+  padding-bottom: 13px;
+  line-height: 1.6;
+  text-align: left;
+  font-weight: 300;
+}
+
+iframe {
+  width: 100vw;
+  height: 470px;
+}
+
+/* CONTACT US */
+.contact {
+  width: 100vw;
+  height: 278px;
+  background-image: url("../images /contactbg.jpg");
+  position: relative;
+}
+.contact_wrapper h2 {
+  text-align: center;
+  padding-top: 70px;
+  font-size: 70px;
+  color: #036;
+  text-shadow: 1px 1px 4px rgb(0 0 0 / 16%);
+  font-family: 'Abel', sans-serif;
+  z-index: 100;
+}
+.contact_inner div {
+  position: absolute;
+  top: 160px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  padding: 20px 80px;
+  width: 48px;
+}
+.margin {
+  width: 100vw;
+  height: 80px;
+  background-color: white;
+}
+
+/* フッター */
+footer {
+  background-color: #036;
+  width: 100vw;
+  height: 120px;
+}
+.footer_wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10px;
+}
+.footer_wrapper p {
+  color: rgba(255,255,255,0.5);
+  margin-top: 20px;
+  font-size: 10px;
+  text-align: right;
+}
+.footer_inner img {
+  width: 180px;
+  margin-top: 30px;
+}
+.footer_inner img:hover {
+  filter: opacity(50%);
+  transition: 0.6s;
+}
+.footer_item {
+  margin-top: 25px;
+}
+.footer_item ul {
+  width: 710px;
+  display: flex;
+  border-bottom: solid 1px rgba(255,255,255,0.5);
+}
+.footer_item a {
+  font-size: 14px;
+  color: white;
+  padding-right: 100px;
+  padding-bottom: 15px;
+}
+.footer_item a:nth-child(3) {
+  padding-right: 0;
+}
+.footer_item a:hover{
+  color: rgba(255,255,255,0.5);
+  transition: 0.6s;
+}
+
+
+/* JavaScript */
+/* その場でふわっ */
+.fadeIn {
+  animation-name: fadeInAnime;
+  animation-duration: 2.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  }
+  @keyframes fadeInAnime{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* 左へふわっ */
+  .fadeLeft {
+    animation-name: fadeLeftAnime;
+    animation-duration: 2.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    }
+    @keyframes fadeLeftAnime {
+      from {
+        opacity: 0;
+        transform: translateX(0);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-50px);
+      }
+    }
+
+  /* .fadeLefts {
+    animation-name: fadeLeftsAnime;
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    }
+    @keyframes fadeLeftsAnime {
+      from {
+        opacity: 0;
+        transform: translateX(0);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(-30px);
+      }
+    } */
+
+  /* 右へふわっ */
+  .fadeRight {
+    animation-name: fadeRightAnime;
+    animation-duration: 2.3s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    }
+    @keyframes fadeRightAnime {
+      from {
+        opacity: 0;
+      transform: translateX(0);
+      }
+      to {
+        opacity: 1;
+      transform: translateX(50px);
+      }
+    }
+
+  /* .fadeRights {
+    animation-name: fadeRightsAnime;
+    animation-duration: 1.0s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    }    
+    @keyframes fadeRightsAnime {
+      from {
+        opacity: 0;
+      transform: translateX(0);
+      }
+      to {
+        opacity: 1;
+      transform: translateX(30px);
+      }
+    } */
+
+  /* 下からふわっ */
+  .fadesUp {
+    animation-name: fadesUpAnime;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    }
+    @keyframes fadesUpAnime {
+      from {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+
+
+  .fadeInTrigger ,.fadeLeftTrigger ,.fadeRightTrigger ,.fadesUpTrigger {
+    opacity: 0;
+}
